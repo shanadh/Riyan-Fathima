@@ -4,7 +4,7 @@
 :root {
   --bg-primary: #0F1115;     /* Midnight Black */
   --bg-secondary: #181A1F;   /* Charcoal Black */
-  --bg-card: rgba(35, 38, 45, 0.8); /* Deep Slate frosted glass */
+  --bg-card: rgba(24, 26, 31, 0.65); /* Deep Slate transparent glassmorphism */
   --text-primary: #F8F5F0;   /* Ivory White */
   --text-muted: #C8C5BE;      /* Soft Silver */
   --text-supermuted: #9B9B9B; /* Cool Gray */
@@ -133,6 +133,7 @@ body {
   width: 120px; /* reduced on mobile to prevent overlapping texts */
   height: 120px;
   opacity: 0.85;
+  mix-blend-mode: screen; /* Blends gold elements constructively with background star pattern and lighting */
 }
 
 .botanical-decor svg {
@@ -273,8 +274,8 @@ body {
   border-radius: 16px;
   padding: 3.5rem 1.2rem; /* reduced padding on mobile for optimal text width */
   background-color: var(--bg-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   position: relative;
   box-shadow: 0 15px 40px var(--shadow-subtle);
 }
@@ -721,8 +722,8 @@ body {
   border-radius: 16px;
   padding: 10px;
   background-color: var(--bg-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   box-shadow: 0 15px 40px var(--shadow-subtle);
   overflow: hidden;
 }
@@ -762,8 +763,8 @@ body {
 
 .map-info-box {
   background-color: var(--bg-card);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-gold);
   border-radius: 12px;
   padding: 2rem;
@@ -943,4 +944,3 @@ body {
     transform: translateY(0);
   }
 }
-
