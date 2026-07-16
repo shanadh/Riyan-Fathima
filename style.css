@@ -114,7 +114,7 @@ body {
 }
 
 .section {
-  padding: 8rem 0;
+  padding: 5rem 0; /* Shrunk padding for mobile screen sizes */
   position: relative;
   overflow: hidden;
 }
@@ -130,8 +130,8 @@ body {
   position: absolute;
   pointer-events: none;
   z-index: 1;
-  width: 180px;
-  height: 180px;
+  width: 120px; /* reduced on mobile to prevent overlapping texts */
+  height: 120px;
   opacity: 0.85;
 }
 
@@ -145,7 +145,17 @@ body {
 .bottom-left { bottom: 0; left: 0; }
 .bottom-right { bottom: 0; right: 0; }
 
+@media (min-width: 480px) {
+  .botanical-decor {
+    width: 180px;
+    height: 180px;
+  }
+}
+
 @media (min-width: 768px) {
+  .section {
+    padding: 8rem 0;
+  }
   .botanical-decor {
     width: 250px;
     height: 250px;
@@ -261,7 +271,7 @@ body {
   max-width: 800px;
   border: 1px solid var(--border-gold);
   border-radius: 16px;
-  padding: 5rem 2rem;
+  padding: 3.5rem 1.2rem; /* reduced padding on mobile for optimal text width */
   background-color: var(--bg-card);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -585,7 +595,7 @@ body {
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-gold);
   border-radius: 16px;
-  padding: 3rem 2rem;
+  padding: 2.2rem 1.2rem; /* shrunken margins for clean mobile display */
   text-align: center;
   transition: var(--transition-smooth);
   box-shadow: 0 10px 30px var(--shadow-subtle);
@@ -633,6 +643,9 @@ body {
   .details-cards-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .details-card {
+    padding: 3rem 2rem; /* restored standard card padding on desktop */
+  }
 }
 
 /* -------------------------------------------------------------
@@ -642,7 +655,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem; /* shrunken gaps to fit narrow screens */
   max-width: 800px;
   margin: 0 auto;
 }
@@ -651,7 +664,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 70px;
+  min-width: 60px; /* shrunken min-width to avoid viewport overlaps */
 }
 
 .countdown-item .number {
@@ -672,10 +685,10 @@ body {
 
 .countdown-separator {
   width: 1px;
-  height: 40px;
+  height: 30px;
   background-color: var(--accent-gold);
-  opacity: 0.5;
-  margin: 0 0.5rem;
+  opacity: 0.3;
+  margin: 0 0.2rem;
 }
 
 @media (min-width: 768px) {
@@ -690,6 +703,11 @@ body {
   }
   .countdown-item .label {
     font-size: 0.95rem;
+  }
+  .countdown-separator {
+    height: 40px;
+    margin: 0 0.8rem;
+    opacity: 0.5;
   }
 }
 
@@ -925,3 +943,4 @@ body {
     transform: translateY(0);
   }
 }
+
